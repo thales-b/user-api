@@ -21,7 +21,7 @@ public class XUser {
     private String username;
 
     @Column(nullable = false)
-    private LocalDate birthdate;
+    private LocalDate birthDate;
 
     // The country could also be represented by an enum
     // in a more fleshed-out project

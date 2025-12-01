@@ -23,7 +23,7 @@ class XUserRepositoryTest {
     void setUp() {
         u = XUser.builder()
                 .username("username")
-                .birthdate(LocalDate.of(2000,1,1))
+                .birthDate(LocalDate.of(2000,1,1))
                 .country("France")
                 .phoneNumber("+33 777 777 777")
                 .gender(Gender.MALE)
@@ -47,7 +47,7 @@ class XUserRepositoryTest {
     void testCreate_DuplicateUsernames() {
         XUser u2 = XUser.builder()
                 .username("username")
-                .birthdate(LocalDate.now())
+                .birthDate(LocalDate.now())
                 .country("Italy")
                 .phoneNumber("+39 06 99999999")
                 .gender(Gender.MALE)
