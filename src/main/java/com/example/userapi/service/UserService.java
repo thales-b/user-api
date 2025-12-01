@@ -22,8 +22,8 @@ public class UserService {
         this.userMapper = userMapper;
     }
 
-    public XUserDTO getUser(Long userId) {
-        XUser user = userRepo.findById(userId)
+    public XUserDTO getUser(String username) {
+        XUser user = userRepo.findByUsername(username)
                 .orElseThrow(() -> new UserNotFoundException("User not found"));
         return userMapper.toDTO(user);
     }
