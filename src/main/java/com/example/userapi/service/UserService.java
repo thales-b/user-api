@@ -7,20 +7,17 @@ import com.example.userapi.exception.UserNotFoundException;
 import com.example.userapi.exception.UserValidationException;
 import com.example.userapi.model.XUser;
 import com.example.userapi.repositories.XUserRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 @Service
+@AllArgsConstructor
 public class UserService {
     private final XUserRepository userRepo;
     private final XUserMapper userMapper;
-
-    public UserService(XUserRepository userRepo, XUserMapper userMapper) {
-        this.userRepo = userRepo;
-        this.userMapper = userMapper;
-    }
 
     public XUserDTO getUser(String username) {
         XUser user = userRepo.findByUsername(username)
