@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
 public class UserController {
     private final UserService userService;
 
@@ -18,7 +18,7 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<XUserDTO> registerUser(@RequestBody XUserDTO userDTO) {
         XUserDTO user = userService.registerUser(userDTO);
         return ResponseEntity.ok(user);
