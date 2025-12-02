@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Builder
+@ToString
 // User is a reserved keyword in most SQL databases
 public class XUser {
     @Id
