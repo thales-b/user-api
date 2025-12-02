@@ -34,15 +34,15 @@ mvn spring-boot:run
 ### 1. User retrieval
 * **path**: `/api/users/{username}`
 * **response**:
-* `200 OK` (user found)
-* `404 Not Found` (user not found)
+  * `200 OK` (user found)
+  * `404 Not Found` (user not found)
 
 ### 2. User registration
 * **path**: `/api/users/register`
 * **body**: The user to register
 * **response**:
-* `200 OK` (registration successful)
-* `400 Bad Request` (malformed user)
-* `409 Conflict` (user already registered)
+  * `200 OK` (registration successful)
+  * `400 Bad Request` (malformed user)
+  * `409 Conflict` (user already registered)
 
 Examples can be found in the `User API.postman_collection.json` file at the root of the project.
