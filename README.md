@@ -37,8 +37,8 @@ mvn spring-boot:run
 * `200 OK` (user found)
 * `404 Not Found` (user not found)
 
-### 2. User registration
-* **path**: ̀/api/users/register`
+### 2. User registration
+* **path**: `/api/users/register`
 * **body**: The user to register
 * **response**:
 * `200 OK` (registration successful)
