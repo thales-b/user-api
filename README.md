@@ -12,11 +12,11 @@ A RESTful API built with Spring Boot for managing user data.
 * Framework: Spring Boot 4
 * Database: H2
 
-### Prerequisites
+## Prerequisites
 * JDK 25
 * Apache Maven 4
 
-### Build and run
+## Build and run
 1. Clone the repository
 ```
 git clone https://github.com/thales-b/user-api
@@ -29,3 +29,20 @@ mvn clean install
 ```
 mvn spring-boot:run
 ```
+
+## API endpoints
+### 1. User retrieval
+* **path**: `/api/users/{username}`
+* **response**:
+* `200 OK` (user found)
+* `404 Not Found` (user not found)
+
+### 2. User registration
+* **path**: ̀/api/users/register`
+* **body**: The user to register
+* **response**:
+* `200 OK` (registration successful)
+* `400 Bad Request` (malformed user)
+* `409 Conflict` (user already registered)
+
+Examples can be found in the `User API.postman_collection.json` file at the root of the project.
